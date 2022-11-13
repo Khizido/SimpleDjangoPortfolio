@@ -546,6 +546,54 @@ button:nth-child(2) {
   background: #067719;
   border-radius: 30px;
 }
+#eight {
+  height: 10px;
+  width: 65%;
+  background: #031606;
+  border-radius: 30px;
+}
+#nine {
+  height: 10px;
+  width: 60%;
+  background: #067719;
+  border-radius: 30px;
+}
+#ten {
+  height: 10px;
+  width: 60%;
+  background: #770655;
+  border-radius: 30px;
+}
+#onbir {
+  height: 10px;
+  width: 90%;
+  background: #062477;
+  border-radius: 30px;
+}
+#oniki {
+  height: 10px;
+  width: 100%;
+  background: #777006;
+  border-radius: 30px;
+}
+#onuc {
+  height: 10px;
+  width: 95%;
+  background: #067719;
+  border-radius: 30px;
+}
+#ondort {
+  height: 10px;
+  width: 95%;
+  background: #707706;
+  border-radius: 30px;
+}
+#onbes {
+  height: 10px;
+  width: 95%;
+  background: #740707;
+  border-radius: 30px;
+}
 .bar-info {
   display: flex;
   justify-content: space-between;
