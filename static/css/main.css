@@ -4,10 +4,78 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel&family=Niconne&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Candal&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 0%;
+  }
+  50% {
+      background-position: 100% 100%;
+  }
+  100% {
+      background-position: 0% 0%;
+  }
+}
 body {
-  background: #100e1a !important;
+  margin: auto;
+  overflow: auto;
+  background: linear-gradient(315deg, rgba(11, 5, 37) 3%, rgba(8, 28, 48) 38%, rgba(1, 44, 41) 68%, rgba(39, 1, 1) 98%);
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+  background-attachment: fixed;
   overflow-x: hidden;
-  transition: all 0.5s ease !important;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.wave {
+  background: rgba(0, 116, 136, 0.25);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 6em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0,0);
+    opacity: 0.3;
+    bottom: -1.25em;
+    left: 0;
+    z-index: 0;
+    
+}
+
+.wave:nth-of-type(2) {
+  bottom: -1.25em;
+  animation: wave 18s linear reverse infinite;
+  opacity: 0.5;
+}
+
+.wave:nth-of-type(3) {
+  bottom: -2.5em;
+  animation: wave 20s -1s reverse infinite;
+  opacity: 0.7;
+}
+
+@keyframes wave {
+  2% {
+      transform: translateX(-2);
+  }
+
+  25% {
+      transform: translateX(-25%);
+  }
+
+  50% {
+      transform: translateX(-50%);
+  }
+
+  75% {
+      transform: translateX(-25%);
+  }
+
+  100% {
+      transform: translateX(-2);
+  }
 }
 html {
   scroll-behavior: smooth;
@@ -26,7 +94,7 @@ a {
   bottom: 0;
   z-index: 9999;
   overflow: hidden;
-  background: #fff;
+  background: linear-gradient(315deg, rgba(11, 5, 37) 3%, rgba(8, 28, 48) 38%, rgba(1, 44, 41) 68%, rgba(39, 1, 1) 98%);
 }
 #preloader:before {
   content: "";
@@ -442,6 +510,7 @@ button:nth-child(2) {
 .initial-3 img {
   width: 100%;
   margin-top: 30px;
+  
 }
 .initial .title h1 {
   font-size: 2.4rem;
@@ -507,49 +576,49 @@ button:nth-child(2) {
 #one {
   height: 10px;
   background: #db7093;
-  width: 70%;
+  width: 85%;
   border-radius: 30px;
 }
 #two {
   height: 10px;
-  width: 50%;
+  width: 60%;
   background: #2a6eec;
   border-radius: 30px;
 }
 #three {
   height: 10px;
-  width: 65%;
+  width: 70%;
   background: #15ff00;
   border-radius: 30px;
 }
 #four {
   height: 10px;
-  width: 60%;
+  width: 85%;
   background: #ee3b3b;
   border-radius: 30px;
 }
 #five {
   height: 10px;
-  width: 55%;
-  background: #e9b50a;
+  width: 85%;
+  background: #e2a703;
   border-radius: 30px;
 }
 #six {
   height: 10px;
-  width: 40%;
+  width: 75%;
   background: #b610a8;
   border-radius: 30px;
 }
 #seven {
   height: 10px;
-  width: 75%;
-  background: #067719;
+  width: 30%;
+  background: #2f25b9;
   border-radius: 30px;
 }
 #eight {
   height: 10px;
   width: 65%;
-  background: #031606;
+  background: #74af06;
   border-radius: 30px;
 }
 #nine {
@@ -560,7 +629,7 @@ button:nth-child(2) {
 }
 #ten {
   height: 10px;
-  width: 60%;
+  width: 50%;
   background: #770655;
   border-radius: 30px;
 }
@@ -578,20 +647,38 @@ button:nth-child(2) {
 }
 #onuc {
   height: 10px;
-  width: 95%;
-  background: #067719;
+  width: 80%;
+  background: #066677;
   border-radius: 30px;
 }
 #ondort {
   height: 10px;
-  width: 95%;
-  background: #707706;
+  width: 60%;
+  background: #773306;
   border-radius: 30px;
 }
 #onbes {
   height: 10px;
-  width: 95%;
-  background: #740707;
+  width: 60%;
+  background: #077450;
+  border-radius: 30px;
+}
+#onalti {
+  height: 10px;
+  width: 70%;
+  background: #5e0774;
+  border-radius: 30px;
+}
+#onyedi {
+  height: 10px;
+  width: 75%;
+  background: #5fdd65;
+  border-radius: 30px;
+}
+#onsekiz {
+  height: 10px;
+  width: 65%;
+  background: #ffe134;
   border-radius: 30px;
 }
 .bar-info {
@@ -652,7 +739,7 @@ button:nth-child(2) {
 }
 .title2 {
   color: #dddada !important;
-  font-family: Candal, sans-serif;
+  font-family: 'Anton', sans-serif;
   padding-left: 20px;
 }
 .col-5-info {
@@ -685,7 +772,7 @@ footer {
 .title5 {
   margin-bottom: 30px;
   font-weight: 100 !important;
-  font-family: Candal, sans-serif;
+  font-family: 'Anton', sans-serif;
 }
 .row4 {
   display: flex;
@@ -701,7 +788,7 @@ footer {
   width: 100%;
 }
 .col #helo {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 .contact-info {
   margin-bottom: 20px;
@@ -816,7 +903,7 @@ a {
 #e {
   width: 25px;
   position: absolute;
-  top: -3px;
+  top: 21px;
   margin-left: 5px;
 }
 .navbur.scrolled {
@@ -830,14 +917,14 @@ a {
 #copy {
   text-transform: lowercase;
 }
-.wave {
-  animation-name: wave-animation;
+.wave2 {
+  animation-name: wave2-animation;
   animation-duration: 2.5s;
   animation-iteration-count: infinite;
   transform-origin: 70% 70%;
-  display: inline-block;
+  display: inline;
 }
-@keyframes wave-animation {
+@keyframes wave2-animation {
   0% {
     transform: rotate(0);
   }
@@ -1143,13 +1230,13 @@ body.dark-theme h4,
 body.dark-theme h5,
 body.dark-theme h6,
 body.dark-theme p {
-  color: #000 !important;
+  color: rgb(131, 129, 212) !important;
 }
 body.dark-theme .change-theme {
-  color: #070707 !important;
+  color: #ada4db !important;
 }
 body.dark-theme .icofont-navigation-menu {
-  color: #222 !important;
+  color: rgb(15, 15, 15) !important;
 }
 body.dark-theme .active {
   color: #6e31df !important;
@@ -1161,14 +1248,14 @@ body.dark-theme .nav-menu li:hover > a {
   text-decoration: none !important;
 }
 body.dark-theme .navbur.scrolled {
-  background: #dffaf9 !important;
+  background: #006461 !important;
   transition: background-color 0.2s linear;
 }
 body.dark-theme .contact-info #io {
-  color: #2e2d2d !important;
+  color: #949494 !important;
 }
 body.dark-theme .contact-info #io {
-  color: #2e2d2d !important;
+  color: #a7a7a7 !important;
 }
 /* .lap1 {
 	padding-top: 300px !important;
