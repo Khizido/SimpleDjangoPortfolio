@@ -17,8 +17,7 @@ SECRET_KEY = 'django-insecure-9o^!5shqqavj@#@&36+y+nl3csjw2%hr3(wrzh@be05fd5ita)
 DEBUG = True
 
 ALLOWED_HOSTS = ['https://dpolat.herokuapp.com/',
-                 '127.0.0.1',
-                 'env-khizi.eba-zmg5pcct.us-west-2.elasticbeanstalk.com']
+                 '127.0.0.1']
 
 # Application definition
 
