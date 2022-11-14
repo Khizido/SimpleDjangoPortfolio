@@ -26,3 +26,4 @@ django-storages==1.12.3
 django-summernote==0.8.20.0
 django-watson==1.6.2
 djangorestframework==3.14.0
+static3==0.7.0
