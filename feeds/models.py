@@ -2,7 +2,7 @@ from django.db import models
 
 from django.db import models
 from ckeditor.fields import RichTextField
-
+from adminsortable2.admin import SortableAdminMixin
 
 class PersonalInformation(models.Model):
     name_complete = models.CharField(max_length=50, blank=True, null=True)
@@ -41,7 +41,9 @@ class Projects(models.Model):
     skill = models.TextField(max_length=230, blank=True, null=True)
     link = models.URLField(blank=True, null=True)
     image = models.URLField(blank=True, null=True)
-
+    order = models.PositiveIntegerField(default=0, blank=False, null=False)
+    class Meta:
+        ordering = ['order']  # Sıralamayı bu alana göre yap
     def __str__(self):
         return self.title
 
