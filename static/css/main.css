@@ -691,22 +691,35 @@ button:nth-child(2) {
 }
 .row3 {
   display: flex;
+  align-items: stretch; /* Tüm kartlar aynı yükseklikte */
   justify-content: space-around;
-  align-items: center;
   flex-wrap: wrap;
   margin-top: 30px;
 }
 .initial-6 {
   background: #1d1836 !important;
-  width: 400px !important;
+  width: 525px !important;
+  text-align: center; /* içindeki butonu yatayda ortalar */
+  display: flex;
+  justify-content: center; /* yatayda ortalar */
 }
 .initial-6 {
-  border-radius: 10px;
+  min-height: 350px;
+  align-items: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Sabit yükseklik ve hizalama */
+  box-sizing: border-box;
+}
+
+.initial-6 img {
   width: 100%;
-  transition: ease 0.5s;
-  cursor: pointer;
-  text-align: center;
-  transition: all ease-in-out 0.3s;
+  height: 270px; /* Sabit yükseklik */
+  object-fit: cover; /* Görseli kırp ve sığdır */
+  border-radius: 5px !important;
+  position: relative !important;
 }
 .row3 .initial-6:hover {
   box-shadow: rgb(23 42 69) 0 20px 30px -10px;
@@ -743,12 +756,33 @@ button:nth-child(2) {
   padding-left: 20px;
 }
 .col-5-info {
-  padding: 15px 0;
-  color: #dddada !important;
+    padding: 25px 15px; /* 15px'den 25px'e çıkarıldı */
+    color: #dddada !important;
+    min-height: 120px; /* Minimum yükseklik eklendi */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.6;
+}
+
+.col-5-info p {
+  margin-bottom: 20px;
+  flex-grow: 1;
+  font-size: 14px;
+  text-align: left;
+  white-space: pre-line;
+  word-wrap: break-word;
+  line-height: 1.6;
+  padding: 10px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 8px;
+  max-height: 160px;      /* Maksimum yükseklik */
+  overflow-y: auto;       /* Dikey kaydırma */
 }
 .intial-5 button {
-  margin-top: 20px;
-  width: 100px !important;
+  margin: 0 auto; /* Butonu ortalar */
+  display: block;
 }
 .col-5-info button a {
   color: #dddada !important;
@@ -759,10 +793,7 @@ button:nth-child(2) {
   background: #472a77;
   color: #000 !important;
 }
-.initial-6 img {
-  width: 100%;
-  height: 60%;
-}
+
 footer {
   max-width: 1200px;
   margin: auto;
@@ -1018,7 +1049,7 @@ ion-icon {
   }
   .footing,
   .initial-6 {
-    font-size: 12px;
+    font-size: 5px;
   }
 }
 @media only screen and (max-width: 885px) {
@@ -1263,3 +1294,22 @@ body.dark-theme .contact-info #io {
 /* .pt-6 {
 	padding-top: 3.5rem !important;
 } */
+.col-5-info p::-webkit-scrollbar {
+  width: 8px;
+  background: #23234a; /* Scrollbar arka planı */
+}
+
+.col-5-info p::-webkit-scrollbar-thumb {
+  background: #6e31df; /* Scrollbar tutamacı */
+  border-radius: 8px;
+}
+
+.col-5-info p::-webkit-scrollbar-thumb:hover {
+  background: #472a77; /* Hover rengi */
+}
+
+/* Firefox için */
+.col-5-info p {
+  scrollbar-width: thin;
+  scrollbar-color: #6e31df #23234a;
+}
